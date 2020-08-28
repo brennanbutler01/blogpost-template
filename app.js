@@ -28,9 +28,6 @@ app.get('/compose', (req, res) => {
   res.render('compose');
 })
 
-app.use(express.json())
-app.listen(8080)
-
 app.post('/compose', (req, res) => {
   let post = req.body.postTitle;
   console.log(post);
