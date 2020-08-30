@@ -3,6 +3,6 @@
 <p><%= homeStartingContent %></p>
 
 <% posts.forEach(post => { %>
-<h1><%= post.title %></h1>
-<p><%= post.body %></p>
+<h1 class="postTitle"><%= post.title %></h1>
+<p class="postBody"><%= `${post.body.substring(0, 175)}...` %> <a href="/posts/<%= post.title.toLowerCase(); %>">Read More</a></p>
 <% }) %> <%- include('./partials/footer'); -%>

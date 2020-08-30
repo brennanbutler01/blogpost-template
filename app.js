@@ -38,12 +38,12 @@ app.get('/compose', (req, res) => {
 });
 app.get('/posts/:postTitle', (req, res) => {
 	const requestedPostTitle = req.params.postTitle;
-	posts.forEach((post) => {
-		if (toLower(post.title) === toLower(requestedPostTitle)) {
-			console.log(`${post.title}, ${requestedPostTitle}`);
-			console.log('match!');
-		}
-	});
+  posts.forEach((post) => {
+    if (toLower(post.title) === toLower(requestedPostTitle)) {
+      const requestedPostBody = post.body;
+      res.render('post', { postTitle: requestedPostTitle, postBody: requestedPostBody })
+    }
+  });
 });
 app.post('/compose', (req, res) => {
 	const post = {

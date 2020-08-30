@@ -33,3 +33,16 @@
 	font-size: 12px;
 	color: #fff;
 }
+.postTitle {
+	font-family: 'Univers Condensed';
+}
+.postBody {
+	font-family: 'Open Sans Condensed', sans-serif;
+font-size: 1.75rem;
+}
+.postBody a {
+	color: #a2c8a2;
+}
+.postBody a:hover {
+	color: #c8a2c8;
+}
